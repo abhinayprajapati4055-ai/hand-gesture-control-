@@ -3,7 +3,9 @@
 Control your computer using hand gestures and your webcam! AirControlAI is a Python-based computer vision project designed to make computer interaction more natural and accessible.
 
 ## ✨ Features
+## 📸 Project Preview
 
+  ![AirControlAI Demo](aircontrolai-demo.png)
 * 🖱️ **Cursor Movement** — Move the mouse cursor using your index finger.
 * 📜 **Scrolling** — Use hand gestures to scroll.
 * 🔊 **Volume Control** — Control system volume using supported hand gestures.
