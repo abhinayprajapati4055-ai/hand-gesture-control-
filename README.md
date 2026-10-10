@@ -1,20 +1,17 @@
-# 🚀 AirControlAI — Hand Gesture Control
+# 🖐️ AirControlAI — Hand Gesture Control
 
-**Control your computer using hand gestures with Python and computer vision!**
-
-AirControlAI is a Python-based project that uses your webcam to recognize hand gestures and perform computer actions. The goal is to make computer interaction more intuitive, touch-free, and accessible.
+Control your computer using hand gestures and your webcam! AirControlAI is a Python-based computer vision project designed to make computer interaction more natural and accessible.
 
 ## ✨ Features
 
-* 🖐️ **Hand Gesture Recognition** — Detect hand gestures using your webcam.
-* 🖱️ **Cursor Control** — Move the mouse pointer using your index finger.
-* 📜 **Scrolling** — Scroll through pages using supported hand gestures.
-* 👆 **Click Actions** — Perform supported mouse actions using gestures.
-* 🔊 **Volume Control** — Control system volume using supported gestures.
-* 🎥 **Real-Time Detection** — Process hand movements through a live webcam feed.
-* 🏷️ **Gesture Labels** — Display recognized gestures on the webcam window.
+* 🖱️ **Cursor Movement** — Move the mouse cursor using your index finger.
+* 📜 **Scrolling** — Use hand gestures to scroll.
+* 🔊 **Volume Control** — Control system volume using supported hand gestures.
+* 👆 **Mouse Actions** — Perform supported clicks and other mouse actions using gestures.
+* 🎥 **Real-Time Detection** — Detect hand landmarks through your webcam.
+* 🖥️ **Live Gesture Feedback** — Display recognized gestures on the webcam window.
 
-> Note: Available gestures depend on the implementation in the current version of the code.
+> **Note:** Available gestures depend on the implementation in `main.py` and `gesture.py`.
 
 ## 🛠️ Technologies Used
 
@@ -23,27 +20,14 @@ AirControlAI is a Python-based project that uses your webcam to recognize hand g
 * MediaPipe
 * PyAutoGUI
 
-## 📂 Project Structure
+## 📋 Requirements
 
-```text
-AirControlAI/
-├── main.py
-├── gesture.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
-
-*Your actual repository may contain additional files or a slightly different structure.*
-
-## 💻 Requirements
-
-* Windows, macOS, or Linux
-* Python installed on your computer
+* Windows, macOS, or Linux (some controls may be platform-dependent)
+* Python installed
 * A working webcam
 * Git
 
-## ⚙️ Installation and Setup
+## 🚀 Installation
 
 ### 1. Clone the repository
 
@@ -59,86 +43,83 @@ cd hand-gesture-control-
 
 ### 3. Create a virtual environment
 
-```bash
+**Windows:**
+
+```powershell
 python -m venv venv
 ```
 
 ### 4. Activate the virtual environment
 
-**Windows PowerShell:**
-
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks activation, run this command in the same terminal:
+### 5. Install the required libraries
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+python -m pip install opencv-python mediapipe pyautogui
 ```
 
-Then activate the environment again.
-
-### 5. Install dependencies
-
-If your repository contains a `requirements.txt` file:
-
-```bash
-pip install -r requirements.txt
-```
-
-If you do not have one, install the required packages:
-
-```bash
-pip install opencv-python mediapipe pyautogui
-```
-
-**Important:** Use compatible package versions for your code. If MediaPipe or OpenCV produces an error, check the versions required by your implementation.
+> If MediaPipe installation fails, check the Python and MediaPipe compatibility requirements for your environment.
 
 ### 6. Run AirControlAI
 
-```bash
+```powershell
 python main.py
 ```
 
-Allow webcam access if your operating system requests permission.
+Make sure your webcam is connected and available.
 
-## 🎮 How to Use
+## 🖐️ Gesture Controls
 
-1. Connect or enable your webcam.
-2. Run `main.py`.
-3. Position your hand where the webcam can see it clearly.
-4. Perform a supported gesture.
-5. Watch the on-screen gesture label and corresponding computer action.
+AirControlAI recognizes hand gestures to perform computer actions. The exact mapping depends on the current code.
 
-Use the gestures implemented in `gesture.py` and `main.py`.
+Examples of supported controls include:
 
-## 🔒 Safety and Privacy
+| Action        | Purpose                                                    |
+| ------------- | ---------------------------------------------------------- |
+| Index finger  | Move the cursor                                            |
+| Two fingers   | Scroll                                                     |
+| Thumb gesture | Scroll or control volume, depending on the recognized pose |
+| Pinky gesture | Perform a supported mouse action                           |
+| Open palm     | Perform a supported action                                 |
+| Fist          | Perform a supported action                                 |
+| Pinch gesture | Perform a supported mouse action                           |
 
-* The application uses your webcam for hand gesture recognition.
-* Review the source code before running it.
-* Mouse and keyboard automation can affect open applications.
-* Keep an easy way to stop the program available while testing.
+Refer to `main.py` and `gesture.py` for the exact gesture definitions.
 
-## 🎯 Project Goals
+## 📁 Project Structure
 
-AirControlAI is a learning project exploring computer vision, real-time gesture recognition, and hands-free computer interaction.
+```text
+hand-gesture-control-/
+├── main.py
+├── gesture.py
+├── README.md
+└── requirements.txt
+```
 
-Future improvements may include:
+## 🔒 Privacy
 
-* Better gesture recognition accuracy
-* Customizable gesture mappings
-* Improved cursor smoothing
-* More accessibility features
-* Additional computer controls
+AirControlAI uses your webcam for local hand detection. Webcam access and computer-control permissions are required for the relevant features to work.
+
+Review the code before running it, especially because mouse automation can interact with other applications.
+
+## 🔮 Future Improvements
+
+* Improve gesture recognition accuracy.
+* Reduce cursor movement latency.
+* Add more customizable gestures.
+* Improve accessibility and usability.
+* Add screenshots and a demonstration video.
 
 ## 🤝 Contributing
 
-Suggestions, bug reports, and improvements are welcome!
+Suggestions and improvements are welcome!
 
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
+1. Fork this repository.
+2. Create a branch for your changes.
+3. Make your improvements.
 4. Submit a pull request.
 
 ## 👨‍💻 Author
@@ -147,6 +128,10 @@ Suggestions, bug reports, and improvements are welcome!
 
 GitHub: [@abhinayprajapati4055-ai](https://github.com/abhinayprajapati4055-ai)
 
+## ⭐ Support
+
+If you find AirControlAI interesting, consider giving the repository a star ⭐ on GitHub.
+
 ---
 
-⭐ If you find this project interesting, consider giving the repository a star!
+*Built with Python, computer vision, and curiosity.*
