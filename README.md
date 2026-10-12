@@ -6,6 +6,7 @@ Control your computer using hand gestures and your webcam! AirControlAI is a Pyt
 ## 📸 Project Preview
 
   ![AirControlAI Demo](aircontrolai-demo.png)
+  ![AirControlAI Demo](aircontrolai-demo.gif)
 * 🖱️ **Cursor Movement** — Move the mouse cursor using your index finger.
 * 📜 **Scrolling** — Use hand gestures to scroll.
 * 🔊 **Volume Control** — Control system volume using supported hand gestures.
